@@ -60,6 +60,6 @@ The project is intended as a **portfolio piece** and learning resource for build
 
 ## 📧 Contact
 
-Ricardo Lopes  
+Ricardo Lopes Tomaz
 📧 ricardolptz42@gmail.com  
 [LinkedIn](https://www.linkedin.com/in/ricardo-lopes-tomaz-19053b297?originalSubdomain=br)
