@@ -1,13 +1,14 @@
-package dev.ricardolopestomaz.cadastro_pessoa_springboot.model;
+package dev.ricardolopestomaz.cadastro_pessoa_springboot.Pessoas.Model;
 
+import dev.ricardolopestomaz.cadastro_pessoa_springboot.Carros.Model.CarrosModel;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
 
 // Entity ele transforma uma classe em uma entidade do DB
 @Entity
-@Table(name = "tb_cadastro")
-public class PessoaModel {
+@Table(name = "tb_clientes")
+public class PessoasModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -16,11 +17,16 @@ public class PessoaModel {
     private String email;
     private LocalDate dataDeNascimento;
 
-    public PessoaModel() {
+    // @ManyToOne - Uma Pessoa para vários Carros.
+    @ManyToOne
+    @JoinColumn(name = "carros_id") // chave estrangeira
+    private CarrosModel carros;
+
+    public PessoasModel() {
 
     }
 
-    public PessoaModel(String email, LocalDate dataDeNascimento, String sobrenome, String nome) {
+    public PessoasModel(String email, LocalDate dataDeNascimento, String sobrenome, String nome) {
         this.email = email;
         this.dataDeNascimento = dataDeNascimento;
         this.sobrenome = sobrenome;
