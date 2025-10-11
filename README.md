@@ -3,6 +3,8 @@
 ![Java](https://img.shields.io/badge/Java-17-blue)
 ![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.2-green)
 ![H2 Database](https://img.shields.io/badge/H2-Database-lightgrey)
+![Status](https://img.shields.io/badge/status-completed-brightgreen)
+
 
 ---
 
