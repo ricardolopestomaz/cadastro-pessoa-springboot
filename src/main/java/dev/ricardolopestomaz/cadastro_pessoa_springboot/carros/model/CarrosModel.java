@@ -1,6 +1,8 @@
 package dev.ricardolopestomaz.cadastro_pessoa_springboot.carros.model;
 
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import dev.ricardolopestomaz.cadastro_pessoa_springboot.clientes.model.ClientesModel;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -28,5 +30,6 @@ public class CarrosModel {
     // Muitos carros podem pertencer a um único cliente
     @ManyToOne
     @JoinColumn(name = "cliente_id")
+    @JsonBackReference
     private ClientesModel cliente;
 }

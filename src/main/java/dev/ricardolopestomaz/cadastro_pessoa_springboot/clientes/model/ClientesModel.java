@@ -1,5 +1,6 @@
 package dev.ricardolopestomaz.cadastro_pessoa_springboot.clientes.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import dev.ricardolopestomaz.cadastro_pessoa_springboot.carros.model.CarrosModel;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -27,5 +28,6 @@ public class ClientesModel {
 
     // Um Cliente pode alugar vários Carros
     @OneToMany(mappedBy = "cliente")
+    @JsonManagedReference
     private List<CarrosModel> carros;
 }
